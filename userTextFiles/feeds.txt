@@ -1,1 +1,20 @@
 
+https://arxiv.org/rss/quant-ph
+https://arxiv.org/rss/physics
+https://arxiv.org/rss/cond-mat
+http://www.nature.com/nphys/current_issue/rss
+https://www.nature.com/npjqi/current_issue/rss
+http://www.nature.com/nature/current_issue/rss
+http://feeds.aps.org/rss/recent/prlsuggestions.xml
+http://feeds.aps.org/rss/recent/prl.xml
+http://feeds.aps.org/rss/recent/prx.xml
+http://feeds.aps.org/rss/recent/prapplied.xml
+http://feeds.aps.org/rss/recent/prmaterials.xml
+http://feeds.aps.org/rss/recent/prresearch.xml
+http://feeds.aps.org/rss/recent/pra.xml
+http://feeds.aps.org/rss/recent/prb.xml
+http://feeds.aps.org/rss/recent/rmp.xml
+http://feeds.aps.org/rss/allsuggestions.xml
+https://iopscience.iop.org/journal/rss/0953-2048
+http://science.sciencemag.org/rss/current.xml
+http://science.sciencemag.org/rss/express.xml
