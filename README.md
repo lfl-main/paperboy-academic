@@ -2,6 +2,7 @@
 This code searches RSS feeds for keywords and authors, then pushes the matching articles in a readable format to your chosen slack channel. It should be straightforward to push articles to another medium such as email or basecamp.
 
 For this code to work, you need to populate some text files and create the app in your slack workspace to obtain a slack bot token.
+Afterwards, you can run the code by executing distributor.py in a python environment. I personally use Windows Scheduler to have a lab computer execute a batch file every morning.
 
 You can create the app in your slack workspace by going to https://api.slack.com/apps. Be sure to enable the slack bot user. After installing the app to your workspace, copy the bot user token from the OAuth & Permissions tab. Next, add the token to your system environment variables using the following command:
 Windows cmd line:
