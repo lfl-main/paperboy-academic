@@ -4,21 +4,21 @@ This code searches RSS feeds for keywords and authors, then pushes the matching 
 For this code to work, you need to populate some text files and create the app in your slack workspace to obtain a slack bot token.
 Afterwards, you can run the code by executing distributor.py in a python environment. I personally use Windows Scheduler to have a lab computer execute a batch file every morning.
 
-You can create the app in your slack workspace by going to https://api.slack.com/apps. Be sure to enable the slack bot user. After installing the app to your workspace, copy the bot user token from the OAuth & Permissions tab. Next, add the token to your system environment variables using the following command:\n
-Windows cmd line:\n
-setx SLACK_TOKEN xoxb-xxxxxxxxxx-xxxxxxxxxxx-xxxxxxxxxxxxx\n
-MacOS terminal:\n
-echo 'export SLACK_TOKEN=xoxb-xxxxxxxxxx-xxxxxxxxxxx-xxxxxxxxxxxxx' >> ~/.zshenv\n
+You can create the app in your slack workspace by going to https://api.slack.com/apps. Be sure to enable the slack bot user. After installing the app to your workspace, copy the bot user token from the OAuth & Permissions tab. Next, add the token to your system environment variables using the following command:
+Windows cmd line:
+setx SLACK_TOKEN xoxb-xxxxxxxxxx-xxxxxxxxxxx-xxxxxxxxxxxxx
+MacOS terminal:
+echo 'export SLACK_TOKEN=xoxb-xxxxxxxxxx-xxxxxxxxxxx-xxxxxxxxxxxxx' >> ~/.zshenv
 
 The text files are populated as follows:
 
-authors.txt specifies authors you want to search for. Each line should have one author. Be sure to include any variations such as middle initial in a new line. For Example, authors.txt may contain the following lines:\n
-James Farmer\n
-James T Farmer\n
-J Farmer\n
-JT Farmer\n
-Darian Hartsell\n
-Darian M Hartsell\n
+authors.txt specifies authors you want to search for. Each line should have one author. Be sure to include any variations such as middle initial in a new line. For Example, authors.txt may contain the following lines:
+James Farmer
+James T Farmer
+J Farmer
+JT Farmer
+Darian Hartsell
+Darian M Hartsell
 
 The period after initials should not be included, as the search program will remove periods. i.e., an article with author "J.T. Farmer" will be matched with the line "JT Farmer" from authors.txt. I highly recommend searching Google scholar for any authors you want to track to see if they often use a middle initial.
 
