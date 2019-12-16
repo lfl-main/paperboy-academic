@@ -1,5 +1,8 @@
-# exclude everything
-userTextFiles/*
+# exclude text files in userTextFiles
+userTextFiles/authors.txt
+userTextFiles/feeds.txt
+userTextFiles/keywords.txt
+userTextFiles/channel.txt
 
 # exclude cache files
 *.pyc

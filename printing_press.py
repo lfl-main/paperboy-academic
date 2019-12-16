@@ -5,8 +5,10 @@ Created on Sun Dec 8 09:12:38 2019
 
 @author: James Farmer
 
-Version: 1.0
+Version: 1.0.1
 ChangeLog:
+    1.0.1: bug fix on previous_titles.txt path, uses os.path module so that
+            the path is always correct.
 
 Two classes are defined below, Journalist and Editor.
 
@@ -23,6 +25,7 @@ from re import search, sub
 from functools import reduce
 import sys
 from concurrent.futures import ThreadPoolExecutor
+import os
 
 class Journalist:
     '''Searches the RSS feeds and passes relevant articles'''
@@ -102,7 +105,7 @@ class Journalist:
 class Editor:
     '''retrieves the drafts from Journalist and formats them into
        JSON message payloads'''
-       
+    previousTitles = os.path.dirname(os.path.abspath(__file__)) + '/previous_titles.txt'
     DIVIDER = {"type": "divider"}
        
     def __init__(self,feeds='feeds.txt',keywords='keywords.txt',authors='authors.txt',channel='channel.txt',nLow=1):
@@ -112,12 +115,12 @@ class Editor:
             self.channel = journalist._get_strings(f.read())[0]
         self.username = 'PaperBoy'
         self.icon = ":robot_face:"
-        with open('previous_titles.txt') as f:
+        with open(self.previousTitles) as f:
             self.titles = journalist._get_strings(f.read())
         self.new_titles = []
         self.articles = [self.get_payload(draft) for draft in journalist.drafts if draft['entry']['title'] not in self.titles]
         if self.new_titles:
-            with open('previous_titles.txt','a') as f:
+            with open(self.previousTitles,'a') as f:
                 f.write('\n'.join(str(title) for title in self.new_titles))
                 f.write('\n')
         
