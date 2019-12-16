@@ -1,8 +1,0 @@
-Stabilized Cat in a Driven Nonlinear Cavity: A Fault-Tolerant Error Syndrome Detector
-Fluctuation Theorems for a Quantum Channel
-Methods for Measuring Magnetic Flux Crosstalk between Tunable Transmons
-Calibration of a Cross-Resonance Two-Qubit Gate Between Directly Coupled Transmons
-Experimental Implementation of a Raman-Assisted Eight-Wave Mixing Process
-Fault-tolerant protection of near-term trapped-ion topological qubits under realistic noise sources
-Spectrum and coherence properties of the current-mirror qubit
-Adiabatic quantum computation
